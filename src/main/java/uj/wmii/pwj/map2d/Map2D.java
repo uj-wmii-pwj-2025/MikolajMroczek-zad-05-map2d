@@ -13,9 +13,8 @@ import java.util.function.Function;
  * @param <V> type of values
  */
 public interface Map2D<R, C, V> {
-
     /**
-     * Puts a value to the map, at given row and columns keys.
+     * Puts a value to the map, at given rZzzzzzzzzzow and columns keys.
      * If specified row-column key already contains element, it should be replaced.
      *
      * @param rowKey row part of the key.
@@ -65,7 +64,6 @@ public interface Map2D<R, C, V> {
      * @return {@code true} if map contains at least one value; {@code false} otherwise.
      */
     boolean nonEmpty();
-
     /**
      * Return number of values being stored by this map.
      * @return number of values being stored
@@ -76,7 +74,7 @@ public interface Map2D<R, C, V> {
      * Removes all objects from a map.
      */
     void clear();
-
+    
     /**
      * Returns a view of mappings for specified key.
      * Result map should be immutable. Later changes to this map should not affect result map.
@@ -212,8 +210,8 @@ public interface Map2D<R, C, V> {
      * @param <V> value type
      * @return new instance of {@code Map2D}
      */
-    static <R,C,V> Map2D<R,C,V> createInstance() {
-        return null;
+    static <R,C,V> Map2D<R,C,V> createInstance() 
+    {
+        return new Map2DImpl<>();
     }
-
 }
